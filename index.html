@@ -139,6 +139,7 @@
             align-content: center;
             justify-content: center;
             float:center;
+            flex-direction: row;
         }
         .btn {
             padding: 14px 32px 12px;
@@ -185,6 +186,7 @@
             color: #fff;
             opacity: .8;
             top:10px;
+            font-size:16px;
         }
         .graph {
             position: absolute;
@@ -224,6 +226,11 @@
         @media (max-width: 731px){
             .graph{bottom:3%;height:290px;background-size:190%;background-repeat:no-repeat;opacity:1}
             .graph-tooltip img{width:160px;}
+            .smaller-headline{font-size:10px;line-height: 12px;}
+            .bigger-headline {padding:10px;font-size:35px;line-height:35px;}
+            .graph-tooltip span {font-size:12px;}
+            .btn {width:auto;padding: 14px 0px 12px;margin:3px 5px;}
+            .row {flex-direction: column;}
         }
     </style>
 </html>
