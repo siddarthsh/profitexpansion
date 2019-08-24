@@ -316,12 +316,14 @@ textarea {
 @media (max-width: 991px){
     .graph{display:block;background-position:48% 100%;background-size:130%}
     .graph-tooltip img{width:165px;}
+    .bigger-headline {padding:10px;font-size:42px;line-height:48px;}
+    .graph-tooltip span {font-size:12px;}
 }
 @media (max-width: 731px){
     .graph{bottom:3%;height:290px;background-size:190%;background-repeat:no-repeat;opacity:1}
     .graph-tooltip img{width:160px;}
     .smaller-headline{font-size:10px;line-height: 12px;}
-    .bigger-headline {padding:10px;font-size:35px;line-height:35px;}
+    .bigger-headline {padding:10px;font-size:32px;line-height:38px;}
     .graph-tooltip span {font-size:12px;}
     .btn {width:auto;padding: 14px 0px 12px;margin:3px 5px;}
     .blue-btn{width:100%;}
