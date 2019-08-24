@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div class="logo"><span>Support </span>Assistant</div>
         <div class="section first">
             <div class="container">
                     <div class="smaller-headline">Take Advantage</div>
@@ -109,6 +110,20 @@
         }
         .container {
             z-index:10;
+        }
+        .logo {
+            font-family: 'Manrope', sans-serif;
+            color: #fff;
+            font-size: 24px;
+            line-height: 24px;
+            position: absolute;
+            font-weight: 800;
+            top:30px;
+            left:30px;
+            z-index: 11;
+        }
+        .logo span{
+            font-weight: 500;
         }
         .smaller-headline {
             font-family: 'Manrope', sans-serif;
@@ -232,5 +247,6 @@
             .btn {width:auto;padding: 14px 0px 12px;margin:3px 5px;}
             .row {flex-direction: column;padding-bottom:30px;}
             .section.first {height: calc(100vh - 56px)}
+            .logo{width:100%;text-align:center;left:0px}
         }    </style>
 </html>
