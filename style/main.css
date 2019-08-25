@@ -177,6 +177,11 @@ a {
     font-size:38px;
     line-height:42px;
 }
+
+.bigger-headline.smallest{
+    font-size:30px;
+    line-height:32px;
+}
 .row {
     margin:0 auto;
     width:100%;
@@ -292,7 +297,7 @@ form {
 
 }
 input {
-    height: 70px;
+    height: 50px;
     padding-left: 25px;
     margin:5px;
     width:100%;
@@ -306,7 +311,7 @@ input {
 }
 textarea {
     height:100px;
-    padding: 25px;
+    padding: 15px;
     margin:5px;
     max-width: 400px;
     width:100%;
@@ -316,6 +321,28 @@ textarea {
     border-radius: 4px;
     background-color: rgba(5,95,251,.1);
     color: #131415;
+}
+.wereply {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.wereply-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    background: linear-gradient(135deg,#2ffd0f 0%,#15e3fa 100%);    
+    box-shadow: 0 2px 2px rgba(168,88,92,.2);
+}
+.wereply p {
+    font-size: 14px;
+    padding-bottom:1px;
+    margin-left: 4px;
+    font-family: 'Manrope', sans-serif;
+    color:#000;
+    vertical-align: middle;
+    display: inline-block;
 }
 @media (max-width: 991px){
     .graph{display:block;background-position:48% 100%;background-size:130%}
@@ -328,6 +355,8 @@ textarea {
     .graph-tooltip img{width:160px;}
     .smaller-headline{font-size:10px;line-height: 12px;}
     .bigger-headline {padding:10px;font-size:32px;line-height:38px;}
+    .bigger-headline.small{font-size:24px;line-height:26px;}
+    .bigger-headline.smallest{font-size:20px;line-height:22px;}
     .graph-tooltip span {font-size:12px;}
     .btn {width:auto;padding: 14px 0px 12px;margin:3px 5px;}
     .blue-btn{width:100%;}
@@ -336,4 +365,5 @@ textarea {
     .logo{width:100%;left:5px;top:20px;}
     .phone,.email{display:none;}
     .mobile-view {display:block;}
+    .wereply p {font-size: 12px;}
 } 
