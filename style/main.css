@@ -107,6 +107,10 @@ a {
     flex-wrap: wrap;
     position: fixed;
     z-index: 11;
+    opacity: 0;
+    animation: FadeIn .5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
 }
 .col-flex {
     max-width: 100%;
@@ -161,6 +165,10 @@ a {
     letter-spacing: 5px;
     text-transform: uppercase;
     opacity:.8;
+    opacity: 0;
+    animation: slideInFromBottom .3s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
 }
 .bigger-headline {
     padding-top: 16px;
@@ -172,6 +180,10 @@ a {
     text-align: center;
     max-width: 991px;
     margin:0 auto;
+    opacity: 0;
+    animation: slideInFromBottom .3s;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
 }
 .bigger-headline.small{
     font-size:38px;
@@ -206,6 +218,10 @@ a {
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
+    opacity: 0;
+    animation: FadeIn .5s;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
 }
 .blue-btn {
     color:#fff;
@@ -233,7 +249,13 @@ a {
     align-items: center;
     bottom:0;
     position:fixed;
-    opacity:.5;
+    opacity: 0;
+    animation: FadeIn .3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+.graph-tooltip img{
+    opacity:.5 !important;
 }
 .graph-tooltip span {
     position: fixed;
@@ -262,9 +284,12 @@ a {
     background-image: url(../images/graph.svg);
     background-size: 106%;
     background-repeat: no-repeat;
-    opacity: 1;
     -webkit-box-pack: center;
     background-position: 50% 100%;
+    opacity: 0;
+    animation: FadeIn .3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
 }
 .graph span{
     position: fixed;
@@ -273,6 +298,10 @@ a {
     font-family: 'Manrope', sans-serif;
     color: #fff;
     font-weight: 800;
+    opacity: 0;
+    animation: FadeIn .3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
 }
 .mobile-view {
     display:none;
@@ -308,6 +337,10 @@ input {
     border-radius: 4px;
     background-color: rgba(5,95,251,.1);
     color: #131415;
+    opacity: 0;
+    animation: slideInFromBottom .3s;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
 }
 textarea {
     height:100px;
@@ -321,10 +354,18 @@ textarea {
     border-radius: 4px;
     background-color: rgba(5,95,251,.1);
     color: #131415;
+    opacity: 0;
+    animation: slideInFromBottom .3s;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
 }
 .wereply {
     margin-bottom: 10px;
     text-align: center;
+    opacity: 0;
+    animation: slideInFromBottom .3s;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
 }
 .wereply-circle {
     width: 12px;
@@ -367,3 +408,51 @@ textarea {
     .mobile-view {display:block;}
     .wereply p {font-size: 12px;}
 } 
+
+
+@keyframes slideInFromBottom{0%{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+@keyframes FadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+@keyframes FadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes SlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes DragLeft {
+    0% {
+        opacity: 0;
+        transform: scaleX(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+}
