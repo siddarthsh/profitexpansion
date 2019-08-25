@@ -84,7 +84,9 @@ a {
     font-weight: 400;
     min-height:400px;
 }
-
+.section.half{
+    height:50vh;
+}
 .section.first {
     background-color: #055ffb;
 }
@@ -105,7 +107,7 @@ a {
     width: 100%;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    position: fixed;
+    position: absolute;
     z-index: 11;
     opacity: 0;
     animation: FadeIn .5s;
@@ -248,7 +250,7 @@ a {
     -ms-flex-align: center;
     align-items: center;
     bottom:0;
-    position:fixed;
+    position: absolute;
     opacity: 0;
     animation: FadeIn .3s;
     animation-fill-mode: forwards;
@@ -258,7 +260,7 @@ a {
     opacity:.5 !important;
 }
 .graph-tooltip span {
-    position: fixed;
+    position: absolute;
     font-family: 'Manrope', sans-serif;
     color: #fff;
     opacity: .8;
@@ -266,7 +268,7 @@ a {
     font-size:16px;
 }
 .graph {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: auto;
     right: 0;
@@ -292,7 +294,7 @@ a {
     animation-delay: 0s;
 }
 .graph span{
-    position: fixed;
+    position: absolute;
     bottom:5px;
     right:25px;
     font-family: 'Manrope', sans-serif;
@@ -315,6 +317,17 @@ a {
 }
 .mobile-view a{
     padding:0px 5px;
+}
+.footer {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 14px;
+    text-align: center;
+    padding:10px 0;
+    opacity: 0;
+    animation: slideInFromBottom .3s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
 }
 /* FORM */
 form {
@@ -385,6 +398,40 @@ textarea {
     vertical-align: middle;
     display: inline-block;
 }
+
+
+.slider-wrapper {
+    width: 700px;
+    height: 300px;
+    background: #000;
+    overflow: hidden;
+    margin:0 auto;
+  }
+  
+  .inner-wrapper {
+    width: 500%;
+    height: 100%;
+    position: relative;
+    left: -100%;
+  }
+  
+  
+  .slide {
+    width: calc(100%/5);
+    height: 100%;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: 700;
+    float: left;
+  }
+  
+  .slide img{
+      width:100%;
+  }
+
 @media (max-width: 991px){
     .graph{display:block;background-position:48% 100%;background-size:130%}
     .graph-tooltip img{width:165px;}
@@ -407,9 +454,11 @@ textarea {
     .phone,.email{display:none;}
     .mobile-view {display:block;}
     .wereply p {font-size: 12px;}
+    .slider-wrapper {width: 100%;height: min-content;}
 } 
 
 
+  
 @keyframes slideInFromBottom{0%{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
 @keyframes FadeInUp {

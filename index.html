@@ -6,6 +6,7 @@
         </title>
         <link href="./style/main.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body style="background-color:#055ffb">
             <div class="nav white">
@@ -41,8 +42,74 @@
                 <span>Your health</span>
             </div>
         </div>
+        <div class="section second half">
+            <div class="container">
+
+                    <div class="slider-wrapper">
+
+                            <div class="inner-wrapper">
+                            <div class="slide"><img src="./images/carousel1.JPG"></div>
+                            <div class="slide"><img src="./images/carousel2.JPG"></div>
+                            <div class="slide"><img src="./images/carousel3.JPG"></div>
+                            <div class="slide"><img src="./images/carousel4.JPG"></div>
+                            <div class="slide"><img src="./images/carousel5.JPG"></div>
+                            </div>
+                    
+                    </div>
+
+                    <div class="footer">© 2019 Profit Expansion Group</div>
+            </div>
+                    
+        </div>
     </body>
 
+<script>
+    $(function() {
 
+        var inWrap = $('.inner-wrapper'),
+        $slide = $('.slide');
+      
+      
+        function slideNext() {
+      
+          inWrap.animate({left: '-200%'}, 200, function() {
+        
+            inWrap.css('left', '-100%');
+        
+            $('.slide').last().after($('.slide').first());
+        
+          });
+        
+        }
+      
+      
+         //Enabling auto scroll
+         sliderInterval = setInterval(slideNext, 4000);
+      
+      
+      
+        $('.prev').on('click', function() {
+      
+          inWrap.animate({left: '0%'}, 200, function() {
+      
+            inWrap.css('left', '-100%');
+      
+            $('.slide').first().before($('.slide').last());
+      
+          });
+        });
+      
+      
+        $('.next').on('click', function() {
+      
+          clearInterval(sliderInterval);
+      
+          slideNext();
+      
+        });
+      
+      
+      });
+</script>
 
 </html>
