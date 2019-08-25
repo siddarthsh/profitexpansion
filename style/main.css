@@ -162,11 +162,6 @@ a {
     text-transform: uppercase;
     opacity:.8;
 }
-.smaller-headline.big{
-    font-size:20px;
-    line-height: 22px;
-    font-weight: 900;
-}
 .bigger-headline {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -177,6 +172,10 @@ a {
     text-align: center;
     max-width: 991px;
     margin:0 auto;
+}
+.bigger-headline.small{
+    font-size:38px;
+    line-height:42px;
 }
 .row {
     margin:0 auto;
